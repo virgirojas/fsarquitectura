@@ -5,7 +5,11 @@ import ProyectoCard from "./ProyectoCard";
 
 export default async function FeaturedProyectos() {
   await connectMongo();
-  const featured = await Proyecto.find({ isFeatured: true }).sort({ createdAt: -1 }).limit(3);
+  let featured = await Proyecto.find({ isFeatured: true }).sort({ createdAt: -1 }).limit(3);
+
+  if (featured.length === 0) {
+    featured = await Proyecto.find().sort({ createdAt: -1 }).limit(3);
+  }
 
   return (
     <section
