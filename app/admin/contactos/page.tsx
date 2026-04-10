@@ -53,7 +53,7 @@ export default async function AdminContactosDashboard() {
                         </span>
                       </td>
                       <td className="px-3 py-4 text-sm text-zinc-600 max-w-sm">
-                        <p className="line-clamp-2 italic" title={c.message}>"{c.message}"</p>
+                        <p className="line-clamp-2 italic" title={c.message}>&quot;{c.message}&quot;</p>
                       </td>
                     </tr>
                   ))}

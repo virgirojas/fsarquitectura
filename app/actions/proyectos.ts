@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import connectMongo from "@/lib/mongodb";
-import Proyecto from "@/models/Proyecto";
+import Proyecto, { IProyecto } from "@/models/Proyecto";
 import { verifyAuth } from "./auth";
 
 
@@ -57,7 +57,7 @@ export async function updateProyecto(id: string, formData: FormData) {
   await verifyAuth();
   await connectMongo();
 
-  const proyecto: any = {
+  const proyecto: Partial<IProyecto> = {
     name: formData.get("name") as string,
     category: formData.get("category") as string,
     location: formData.get("location") as string,

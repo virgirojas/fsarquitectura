@@ -88,10 +88,10 @@ export default function Footer() {
 
                         <ul className="mt-5 space-y-4 text-sm text-zinc-500 font-medium">
                             <li>
-                                <a href="/proyectos" className="transition hover:text-black">Proyectos Destacados</a>
+                                <Link href="/proyectos" className="transition hover:text-black">Proyectos Destacados</Link>
                             </li>
                             <li>
-                                <a href="/proyectos" className="transition hover:text-black">Todos los Trabajos</a>
+                                <Link href="/proyectos" className="transition hover:text-black">Todos los Trabajos</Link>
                             </li>
                         </ul>
                     </div>

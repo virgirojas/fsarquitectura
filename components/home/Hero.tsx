@@ -1,3 +1,6 @@
+import Link from "next/link";
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] bg-white lg:min-h-screen flex flex-col lg:flex-row border-b border-black/5">
@@ -17,29 +20,31 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row">
-            <a
+            <Link
               href="/proyectos"
               className="inline-flex items-center justify-center bg-black px-10 py-5 text-xs font-black uppercase tracking-[0.25em] text-white transition hover:bg-zinc-800"
             >
               Ver Proyectos
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/contacto"
               className="inline-flex items-center justify-center border-2 border-black/10 bg-transparent px-10 py-5 text-xs font-black uppercase tracking-[0.25em] text-black transition hover:bg-black/5"
             >
               Contacto
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Imagen Derecha */}
       <div className="relative h-[60vh] w-full lg:h-auto lg:w-1/2 overflow-hidden bg-zinc-100">
-        <img
+        <Image
           src="/hero_generic.jpg"
           alt="Proyecto Arquitectónico Francisco Silva"
-          className="h-full w-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-black/5" />
       </div>

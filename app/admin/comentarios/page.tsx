@@ -60,7 +60,7 @@ export default async function AdminComentarios() {
                     <div className="font-bold text-black uppercase tracking-tight">{r.clientName}</div>
                     <div className="text-black text-xs mt-1">{"★".repeat(r.rating)}{"☆".repeat(5 - r.rating)}</div>
                   </td>
-                  <td className="px-6 py-6 max-w-xs text-zinc-500 italic">"{r.reviewText}"</td>
+                  <td className="px-6 py-6 max-w-xs text-zinc-500 italic">&quot;{r.reviewText}&quot;</td>
                   <td className="px-6 py-6">
                     <span className={`inline-flex items-center rounded-none px-2.5 py-1 text-[10px] font-black uppercase tracking-widest ${r.isActive ? 'bg-black text-white' : 'bg-zinc-100 text-zinc-400'}`}>
                       {r.isActive ? 'Visible' : 'Oculta'}
